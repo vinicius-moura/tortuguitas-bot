@@ -1,13 +1,13 @@
 const { Command } = require('discord.js-commando');
 const { RichEmbed } = require('discord.js');
 
-module.exports = class PenaltiCommand extends Command {
+module.exports = class TuturuCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'tuturu',
             group: 'voice',
             memberName: 'voice',
-            description: 'tuturu is a command'
+            description: 'Mayuri is alive'
         });
     }
     async run(msg){

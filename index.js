@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Commando = require('discord.js-commando');
 const Client = new Commando.Client({
     unknownCommandResponse: false
@@ -8,10 +9,10 @@ Client.registry.registerGroups([
 ])
 .registerCommandsIn(__dirname + '/commands');
 
-Client.login('NDYyMjU4NDI4MDk4NjQxOTM3.DhgC8w.mSYZsFK9-HMWS8kgnHGG9O8Jes8');
+Client.login(process.env.BOT_KEY);
 
 Client.on('ready', () => {
-    console.log('DESCULPE');
+    console.log('BOT is online');
 });
 
 Client.on('message', msg => {
